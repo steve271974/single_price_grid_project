@@ -1,0 +1,139 @@
+/* In this top section all that is happening is that we are declaring that the page
+    uses the border-box sizing style and clarifying the width of the web page and 
+    the font-family that is to be used throughout the web page */
+
+* {
+    box-sizing: border-box;
+    width: 90%%;
+    font-family: 'Karla', sans-serif; /* Here we have used the google font that was 
+    gotten from Google Fonts and used an embeded code for use */
+}
+
+/* CSS styling for all the elements that are bing used on the web page. */
+
+body {
+    background-color: hsl(218, 22%, 67%);
+   
+}
+
+button {
+    background-color: hsl(71, 73%, 54%);
+    border: hsl(71, 73%, 54%);
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 90%;
+    margin: 0 0.7em 0 .7em;
+}
+
+footer {
+    font-size: 18px;
+}
+
+/* CSS styling for all the classes that are being used on the web page. */
+
+.main-content {
+    border-radius: 13px;
+}
+
+.main-grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "topline topline" "b-left-section b-left-section" "b-right-section b-right-section";
+}
+
+.community {
+    grid-area: topline;
+    background-color: white;
+    margin: 3.4em 1.4em 0 1.4em;
+    border-radius: 6px 6px 0 0;
+    padding: 0 1em;
+}
+
+.community p {
+    color: hsl(218, 22%, 67%);
+}
+
+.subscription {
+    grid-area: b-left-section;
+    background-color: hsl(179, 62%, 43%);
+    margin: 0 1.4em 0 1.4em;
+    padding: 0 1em;
+}
+
+.subscription p {
+    color: white;
+    font-size: 20px;
+}
+
+.whyus {
+    grid-area: b-right-section;
+    background-color: hsl(173, 51%, 55%, 1);
+    border-radius: 0 0 6px 6px;
+    margin: 0 1.4em 3.4em 1.4em;
+    padding: 0 1em;
+    color: white;
+}
+
+.services li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 20x;
+    opacity: 0.9;
+}
+
+/* CSS styling for all the classes that are being used on the web page. */
+
+#join {
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+}
+
+#trial {
+    color: hsl(71, 73%, 54%);
+    font-weight: bolder;
+}
+
+#m_sub {
+    color: white;
+}
+
+#costs {
+    color: white;
+    font-size: 20px;
+}
+
+#month {
+    color: white;
+    opacity: 0.4;
+}
+
+/* CSS styling for the media queries -
+
+    below here we are making the styling exceptions for the page is the screen size 
+    is going to be larger than that of cell phone size. */
+@media only screen and (min-width: 600px) {
+    .main-grid-section {
+        grid-template-areas: "topline topline" "b-left-section b-right-section";
+    }
+
+    .subscription {
+        margin: 0 0 0 1.4em;
+        border-radius: 0 0 0 6px;
+    }
+
+    .whyus {
+        margin: 0 1.4em 0 0;
+        border-radius: 0 0 6px 0;
+    }
+
+    button {
+        height: 2.5em;
+    }
+}
